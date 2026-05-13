@@ -325,9 +325,9 @@ function drawPlayer(p) {
 let bullets = [], enemyBullets = [];
 
 function impact(p) {
-  if (p.shootCooldown > 0) return;
-  const rate = p.rapidFire > 0 ? 7 : p.shootRate;
-  p.shootCooldown = rate;
+  if (p.impactCooldown > 0) return;
+  const rate = p.rapidFire > 0 ? 7 : p.impactRate;
+  p.impactCooldown = rate;
 
   const cy = p.y + p.h / 2 - 1;
   if (p.triShot > 0) {
